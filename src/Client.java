@@ -1,0 +1,26 @@
+class Client extends Person {
+
+    // Attributes of a client
+    String email;
+
+    Client(String name, String address, int telephoneNumber, String email) {
+        this.name = name;
+        this.address = address;
+        this.telephoneNumber = telephoneNumber;
+        this.email = email;
+    }
+
+    void hireCatering(String eventType, String date, String staffRequired, Client client) {
+        EventManager eventManager = new EventManager();
+        eventManager.getEventDetails(eventType, date, staffRequired, client);
+    }
+
+    void payCatering() {}
+
+    @Override
+    public String toString() {
+        return "Name: " + name + " \nAddress: " + address
+                + " \nPhoneNumber: " + telephoneNumber
+                + " \nEmail: " + email;
+    }
+}
