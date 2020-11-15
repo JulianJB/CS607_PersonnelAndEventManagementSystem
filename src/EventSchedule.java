@@ -8,6 +8,16 @@ class EventSchedule {
         eventList = new ArrayList<Event>();
     }
 
+    Event getEvent(int eventId) {
+        return eventList.get(eventId);
+    }
+
+    void printEventSchedule() {
+        for (Event event : eventList) {
+            System.out.println(event + "\n");
+        }
+    }
+
     void cancelEvent(Event event) {}
 
     void modifyEvent(Event event) {}

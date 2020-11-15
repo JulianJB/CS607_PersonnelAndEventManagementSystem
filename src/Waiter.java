@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 class Waiter extends Person {
 
     // Attributes of a waiter
     int staffNumber;
     String waitingService[];
+    ArrayList<Event> personalSchedule;
     boolean clockedin;
     int workingHours;
     double balance;
@@ -13,6 +16,12 @@ class Waiter extends Person {
 
     void clockIn() {
         clockedin = true;
+    }
+
+    void checkPersonalSchedule() {
+        for (Event event : personalSchedule) {
+            System.out.println(event + "\n");
+        }
     }
 
     void collectSalary() {

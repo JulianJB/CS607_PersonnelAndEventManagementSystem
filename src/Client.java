@@ -15,7 +15,10 @@ class Client extends Person {
         eventManager.getEventDetails(eventType, date, staffRequired, client);
     }
 
-    void payCatering() {}
+    void payCatering() {
+        System.out.println("Service costs paid");
+        //eventmanager.balance += 100 * 8;
+    }
 
     @Override
     public String toString() {

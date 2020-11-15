@@ -5,6 +5,7 @@ class EventManager extends Waiter {
     // Attributes of an event manager
     EventSchedule eventSchedule;
     ArrayList<Waiter> staffList;
+    double cateringBalance;
 
     EventManager() {
         eventSchedule = new EventSchedule();
@@ -38,6 +39,9 @@ class EventManager extends Waiter {
 
     void scheduleEvent(Event event) {
         eventSchedule.eventList.add(event);
+        int staffArr[] = {1, 0, 3};
+        for (int i = 0; i < staffArr.length; i ++) {
+        }
     }
 
     void cancelEvent(int eventId) {
@@ -58,5 +62,11 @@ class EventManager extends Waiter {
         for (int index : idx_employee) {
             event.waiterList.add(staffList.get(index));
         }
+    }
+
+    void collectCateringIncome() {
+        System.out.println("Catering balance is: " + cateringBalance);
+        System.out.println("Balance withdrawn");
+        cateringBalance = 0.0;
     }
 }
